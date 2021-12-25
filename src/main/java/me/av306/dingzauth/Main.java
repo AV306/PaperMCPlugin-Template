@@ -1,5 +1,7 @@
 package me.av306.dingzauth.Main;
 
+import me.av306.dingzauth.services.*;
+import me.av306.dingzauth.listeners.*;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -24,6 +26,8 @@ public class Main extends JavaPlugin
 
 	package-private static final String ID = "DingzAuth";
 
+	public static IPWhitelistService ipWhitelist;
+
 
 	@Override
 	public void onEnable()
@@ -37,6 +41,14 @@ public class Main extends JavaPlugin
     logConsole( "Initialising! Here we go!" );
     logConsole( "Server: " + server.getName() );
     logConsole( "Plugins: " + Arrays.toString( pluginManager.getPlugins() ) );
+
+		// start services
+		logConsole( "Starting services!" );
+		ipWhitelist = new IPWhitelistService(); // instantiated on enabling just in case
+
+		// register listeners
+		pluginManager.registerEvents( new PlayerHandshakeListener(), this );
+			
 	}
 
 
