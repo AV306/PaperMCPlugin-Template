@@ -1,5 +1,7 @@
 package exampleplugin;
 
+import exampleplugin.commands.*;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.plugin.java.JavaPlugin;
