@@ -1,7 +1,7 @@
 
-name: DingzAuth
-version: 0.2.3
+name: Example Plugin
+version: 0.0.1
 api-version: 1.18
-author: AV3_08
-main: me.av306.dingzauth.Main
+author: You!
+main: exampleplugin.Main
 description: yep
