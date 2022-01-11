@@ -4,4 +4,10 @@ version: 0.0.1
 api-version: 1.18
 author: You!
 main: exampleplugin.Main
-description: yep
+description: Hallo!
+
+commands:
+  examplecommand:
+    description: Example command
+    usage: /examplecommand
+    
